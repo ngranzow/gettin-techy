@@ -66,11 +66,11 @@ ol li::marker {
     font-size: small;
 }
 
-.post-link {
+.post-link, .edit-link {
     color: var(--link-color);
 }
 
-.post-link:hover {
+.post-link:hover, .edit-link:hover {
     color: var(--hover-color);
 }
 

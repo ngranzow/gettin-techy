@@ -13,12 +13,21 @@
     <header>
         <nav class="columns">
             <div class="column is-3">
-                <a href="/" class="title">Gettin' Techie</a>
+                <a href="/" class="title">
+                    {{#if loggedIn}}
+                    Logged In
+                    {{else}}
+                    Gettin' Techie
+                    {{/if}}
+                </a>
             </div>
             <div class="column">
                 <div class="tabs is-right is-medium">
                     <ul>
                         {{#if loggedIn}}
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
                         <li>
                             <a href="/dashboard">Dashboard</a>
                         </li>
