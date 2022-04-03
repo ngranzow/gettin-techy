@@ -25,7 +25,7 @@ If you need to update any code and would like to have the server running and upd
 Run `npm start` in your command line and open http://localhost:3001/ or visit the deployed site [here.](https://gettin-techy.herokuapp.com/)
 
 The main homepage should look similar to:
-![Image of website](https://ngranzow.github.io/gettin-techy/assets/images/Gettin-Techie.png)
+![Image of website](https://github.com/ngranzow/gettin-techy/blob/main/assets/images/Gettin-Techie.png)
 
 ## License 
 To read the ISC license click [here](https://opensource.org/licenses/ISC)
