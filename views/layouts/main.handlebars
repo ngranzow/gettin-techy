@@ -12,11 +12,13 @@
 <body>
     <header>
         <nav class="columns">
-            <div class="column is-3">
+            {{#if loggedIn}}
+            <div class="column is-4">
                 <a href="/" class="title">
-                    {{#if loggedIn}}
-                    Logged In
+                    Logged Into <span class="logged-in-title">Gettin' Techie</span>
                     {{else}}
+                    <div class="column is-3">
+                    <a href="/" class="title">
                     Gettin' Techie
                     {{/if}}
                 </a>

@@ -33,8 +33,20 @@ header {
     color: var(--tertiary-color);
 }
 
+.logged-in-title {
+    font-size: small;
+}
+
+.title:hover {
+    color: var(--hover-color);
+}
+
 .tabs a {
     color: var(--primary-color);
+}
+
+.tabs a:hover {
+    color: var(--hover-color);
 }
 
 main {
@@ -62,6 +74,18 @@ ol li::marker {
     color: var(--primary-color);
 }
 
+.delete-post-btn {
+    color: red;
+}
+
+.post-date {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 1em;
+    font-weight: bold ;
+}
+
 .footer-content {
     font-size: small;
 }
@@ -75,6 +99,7 @@ ol li::marker {
 }
 
 footer {
+    position: fixed;
     padding: 2%;
     left: 0;
     bottom: 0;

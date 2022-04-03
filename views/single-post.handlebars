@@ -3,13 +3,14 @@
 {{#if loggedIn}}
 <form class="comment-form">
     <div class="field">
-        <textarea class="textarea" name="comment-body"></textarea>
+        <textarea class="textarea" name="comment-body" placeholder="Add comment here"></textarea>
     </div>
 
     <div>
         <button class="button" type="submit">Add Comment</button>
     </div>
 </form>
+</br>
 {{/if}}
 
 {{> comments post.comments}}
