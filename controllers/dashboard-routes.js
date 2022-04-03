@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// allows a user to see all their posts on their dashboard
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
@@ -38,6 +39,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// allows the use to select which post they would like to edit
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
@@ -82,6 +84,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
+
+// allows a user to create a new post
 router.get('/new', withAuth, (req, res) => {
     Post.findAll({
         where: {

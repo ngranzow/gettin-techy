@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
+// shows all posts on the homepage
 router.get('/', (req, res) => {
     console.log(req.session);
 
@@ -39,6 +40,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// route for the user to login
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -48,6 +50,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// route for a user to sign up
 router.get('/sign-up', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -57,6 +60,7 @@ router.get('/sign-up', (req, res) => {
     res.render('sign-up');
 });
 
+// rought to see a single post
 router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {

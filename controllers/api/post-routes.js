@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// get all posts
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
@@ -34,6 +35,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// gets a single post based on ID
 router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -73,6 +75,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// creates a new post but only if logged in
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
@@ -86,6 +89,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
+// allows the editing of a post if logged in
 router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
@@ -111,6 +115,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
+// allows the deletion of a post if logged in
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
       where: {
